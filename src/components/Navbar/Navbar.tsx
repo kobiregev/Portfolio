@@ -9,14 +9,10 @@ export const Navbar: React.FC<NavbarProps> = ({ setDarkMode, darkMode }) => {
   const handleDarkMode = () =>
     setDarkMode((prevDarkMode: boolean) => !prevDarkMode);
 
-  const darkModeIcon = darkMode ? (
-    <FiMoon />
-  ) : (
-    <FiSun />
-  );
+  const darkModeIcon = darkMode ? <FiMoon /> : <FiSun />;
 
   return (
-    <div className="navbar bg-base-100 w-screen sticky top-0 z-10">
+    <div className="navbar bg-base-100 w-full sticky top-0 z-10 p-0">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost btn-circle">
@@ -42,7 +38,9 @@ export const Navbar: React.FC<NavbarProps> = ({ setDarkMode, darkMode }) => {
         <a className="btn btn-ghost normal-case text-xl">Kobi Regev</a>
       </div>
       <div className="navbar-end">
-        <button className="btn btn-ghost btn-circle" onClick={handleDarkMode}>{darkModeIcon}</button>
+        <button className="btn btn-ghost btn-circle" onClick={handleDarkMode}>
+          {darkModeIcon}
+        </button>
       </div>
     </div>
   );

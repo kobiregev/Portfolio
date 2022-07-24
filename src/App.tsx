@@ -9,7 +9,7 @@ import { Projects } from "./components/Projects/Projects";
 function App() {
   const [darkMode, setDarkMode] = useDarkMode();
   return (
-    <div className="py-0">
+    <div className="py-0 w-full">
       <Navbar setDarkMode={setDarkMode} darkMode={darkMode} />
       <Banner />
       <About />

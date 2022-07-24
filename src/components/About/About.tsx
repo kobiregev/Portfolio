@@ -4,10 +4,9 @@ interface AboutProps {}
 
 export const About: React.FC<AboutProps> = () => {
   return (
-    <div className="flex items-center justify-center my-6 max-w-full">
+    <div className="flex items-center justify-center my-6">
       <article className="max-w-sm md:max-w-lg prose text-center">
         <h1 className="mt-6">ABOUT ME</h1>
-        {/* <div className="divider max-w-xl" /> */}
         <div>
           Here you will find more information about me, what I do, and my
           current skills mostly in terms of programming and technology
