@@ -9,14 +9,18 @@ export const Navbar: React.FC<NavbarProps> = ({ setDarkMode, darkMode }) => {
   const handleDarkMode = () =>
     setDarkMode((prevDarkMode: boolean) => !prevDarkMode);
 
-  const darkModeIcon = darkMode ? <FiMoon /> : <FiSun />;
+  const darkModeIcon = darkMode ? (
+    <FiMoon className="w-6 h-6" />
+  ) : (
+    <FiSun className="w-6 h-6" />
+  );
 
   return (
     <div className="navbar bg-base-100 w-full sticky top-0 z-10 p-0">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost btn-circle">
-            <FiMenu />
+            <FiMenu className="w-6 h-6" />
           </label>
           <ul
             tabIndex={0}
