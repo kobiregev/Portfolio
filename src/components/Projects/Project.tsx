@@ -11,7 +11,7 @@ interface ProjectProps {
 
 export const Project: React.FC<ProjectProps> = ({}) => {
   return (
-    <div className="card w-96 bg-base-100 shadow-xl">
+    <div className="card w-80 bg-base-100 shadow-xl">
       <figure className="h-full">
         <img
           className="h-full"

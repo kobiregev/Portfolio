@@ -18,7 +18,14 @@ export const Banner: React.FC<HeaderProps> = () => {
             />
           </div>
           <p className="py-6">A Fullstack Web developer</p>
-          <button className="btn btn-primary">DOWNLOAD RESUME</button>
+          <a
+            className="btn btn-primary"
+            href="/Kobi-Regev-cv.docx"
+            download
+            target="_blank"
+          >
+            Download Resume
+          </a>
           <BsArrowDownCircle className="animate-bounce mt-6 w-8 h-8 mx-auto md:hidden" />
         </div>
       </div>

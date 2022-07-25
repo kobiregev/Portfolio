@@ -13,7 +13,7 @@ export default function useDarkMode(): [boolean, React.Dispatch<any>] {
   const enabled: boolean = darkMode ?? prefersDarkMode;
   // coffee,halloween
   useEffect(() => {
-    document.documentElement.dataset.theme = enabled ? "halloween" : "emerald";
+    document.documentElement.dataset.theme = enabled ? "coffee" : "bumblebee";
   }, [enabled]);
 
   return [enabled, setDarkMode];

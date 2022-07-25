@@ -1,10 +1,8 @@
 import React from "react";
 
-interface AboutProps {}
-
-export const About: React.FC<AboutProps> = () => {
+export const About = React.forwardRef<HTMLDivElement>((_, ref) => {
   return (
-    <div className="flex items-center justify-center my-6">
+    <div className="flex items-center justify-center my-6" ref={ref}>
       <article className="max-w-sm md:max-w-lg prose text-center">
         <h1 className="mt-6">ABOUT ME</h1>
         <div>
@@ -33,4 +31,4 @@ export const About: React.FC<AboutProps> = () => {
       </article>
     </div>
   );
-};
+});

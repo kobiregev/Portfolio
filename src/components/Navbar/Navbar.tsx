@@ -3,9 +3,16 @@ import { FiMoon, FiSun, FiMenu } from "react-icons/fi";
 interface NavbarProps {
   setDarkMode: React.Dispatch<any>;
   darkMode: boolean;
+  onAboutScroll: () => void;
+  onProjectsScroll: () => void;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ setDarkMode, darkMode }) => {
+export const Navbar: React.FC<NavbarProps> = ({
+  setDarkMode,
+  darkMode,
+  onAboutScroll,
+  onProjectsScroll,
+}) => {
   const handleDarkMode = () =>
     setDarkMode((prevDarkMode: boolean) => !prevDarkMode);
 
@@ -26,14 +33,16 @@ export const Navbar: React.FC<NavbarProps> = ({ setDarkMode, darkMode }) => {
             tabIndex={0}
             className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
           >
-            <li>
-              <a>Homepage</a>
+            <li onClick={onAboutScroll}>
+              <a>About Me</a>
+            </li>
+            <li onClick={onProjectsScroll}>
+              <a>Projects</a>
             </li>
             <li>
-              <a>Portfolio</a>
-            </li>
-            <li>
-              <a>About</a>
+              <a href="/Kobi-Regev-cv.docx" download target="_blank">
+                Download Resume
+              </a>
             </li>
           </ul>
         </div>
