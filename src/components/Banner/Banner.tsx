@@ -24,7 +24,7 @@ export const Banner: React.FC<HeaderProps> = () => {
             download
             target="_blank"
           >
-            Download Resume
+            Download CV
           </a>
           <BsArrowDownCircle className="animate-bounce mt-6 w-8 h-8 mx-auto md:hidden" />
         </div>

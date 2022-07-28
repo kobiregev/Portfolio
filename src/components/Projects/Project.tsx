@@ -1,5 +1,5 @@
 import React from "react";
-
+import { motion } from "framer-motion";
 interface ProjectProps {
   src?: string;
   title?: string;
@@ -11,7 +11,11 @@ interface ProjectProps {
 
 export const Project: React.FC<ProjectProps> = ({}) => {
   return (
-    <div className="card w-80 bg-base-100 shadow-xl">
+    <motion.div
+      initial={{ opacity: 0, x: "-100%" }}
+      whileInView={{ opacity: 1, x: "0" }}
+      className="card w-80 bg-base-100 shadow-xl"
+    >
       <figure className="h-full">
         <img
           className="h-full"
@@ -30,6 +34,6 @@ export const Project: React.FC<ProjectProps> = ({}) => {
           <div className="badge badge-outline">Redux</div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };

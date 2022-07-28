@@ -10,7 +10,7 @@ import { useRef } from "react";
 const handleScroll = (ref: React.RefObject<any>) => {
   ref.current?.scrollIntoView({
     behavior: "smooth",
-    block: "center",
+    block: "start",
   });
 };
 

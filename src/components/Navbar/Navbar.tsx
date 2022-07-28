@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion"
 import { FiMoon, FiSun, FiMenu } from "react-icons/fi";
 interface NavbarProps {
   setDarkMode: React.Dispatch<any>;
@@ -41,7 +42,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             </li>
             <li>
               <a href="/Kobi-Regev-cv.docx" download target="_blank">
-                Download Resume
+                Download Cv
               </a>
             </li>
           </ul>
