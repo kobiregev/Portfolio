@@ -12,8 +12,39 @@ export default function useDarkMode(): [boolean, React.Dispatch<any>] {
   );
   const enabled: boolean = darkMode ?? prefersDarkMode;
   // coffee,halloween
+  // [
+  //   "light",
+  //   "dark",
+  //   "cupcake",
+  //   "bumblebee",
+  //   "emerald",
+  //   "corporate",
+  //   "synthwave",
+  //   "retro",
+  //   "cyberpunk",
+  //   "valentine",
+  //   "halloween",
+  //   "garden",
+  //   "forest",
+  //   "aqua",
+  //   "lofi",
+  //   "pastel",
+  //   "fantasy",
+  //   "wireframe",
+  //   "black",
+  //   "luxury",
+  //   "dracula",
+  //   "cmyk",
+  //   "autumn",
+  //   "business",
+  //   "acid",
+  //   "lemonade",
+  //   "night",
+  //   "coffee",
+  //   "winter",
+  // ];
   useEffect(() => {
-    document.documentElement.dataset.theme = enabled ? "coffee" : "bumblebee";
+    document.documentElement.dataset.theme = enabled ? "luxury" : "bumblebee";
   }, [enabled]);
 
   return [enabled, setDarkMode];

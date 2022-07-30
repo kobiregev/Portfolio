@@ -1,16 +1,22 @@
 import React from "react";
-
+import { motion } from "framer-motion";
 export const About = React.forwardRef<HTMLDivElement>((_, ref) => {
   return (
-    <div className="flex items-center justify-center my-6" ref={ref}>
-      <article className="max-w-sm md:max-w-lg prose text-center">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      className="flex items-center justify-center py-6"
+      ref={ref}
+    >
+      <article className="max-w-sm md:max-w-lg prose text-center px-6 md:px-0">
         <h1 className="mt-6">ABOUT ME</h1>
-        <div>
+        <div className="text-justify">
           Here you will find more information about me, what I do, and my
           current skills mostly in terms of programming and technology
         </div>
         <h2>Get to know me!</h2>
-        <p>
+        <p className="text-justify ">
           Get to know me! I'm a Frontend Web Developer building the Front-end of
           Websites and Web Applications that leads to the success of the overall
           product. Check out some of my work in the Projects section. I also
@@ -29,6 +35,6 @@ export const About = React.forwardRef<HTMLDivElement>((_, ref) => {
           then don't hesitate to contact me.
         </p>
       </article>
-    </div>
+    </motion.div>
   );
 });
